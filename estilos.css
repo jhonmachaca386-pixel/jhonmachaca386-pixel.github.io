@@ -1,0 +1,484 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #172033;
+    line-height: 1.6;
+}
+
+/* MENU */
+
+header {
+    background: #07111f;
+    color: white;
+    padding: 16px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 18px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #ff6b00;
+}
+
+/* PORTADA */
+
+.hero {
+    min-height: 88vh;
+    background:
+        linear-gradient(
+            rgba(4, 12, 25, 0.72),
+            rgba(4, 12, 25, 0.88)
+        ),
+        url("https://images.unsplash.com/photo-1592656094267-764a45160876");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    text-align: center;
+
+    padding: 40px 20px;
+}
+
+.hero h1 {
+    font-size: clamp(60px, 12vw, 130px);
+    line-height: 1;
+    font-weight: 900;
+}
+
+.hero h2 {
+    margin: 20px 0;
+    font-size: 28px;
+}
+
+.hero p {
+    margin-bottom: 30px;
+}
+
+.etiqueta {
+    display: inline-block;
+    background: #ff6b00;
+    color: white;
+    padding: 7px 16px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* BOTONES */
+
+.botones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn,
+button,
+.mini-btn {
+    display: inline-block;
+    border: none;
+    background: #ff6b00;
+    color: white;
+    text-decoration: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .25s;
+}
+
+.btn:hover,
+button:hover,
+.mini-btn:hover {
+    transform: translateY(-2px);
+    opacity: .9;
+}
+
+.btn-verde {
+    background: #20b65a;
+}
+
+/* SECCIONES */
+
+.seccion {
+    padding: 75px 8%;
+    text-align: center;
+}
+
+.seccion > h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+.introduccion {
+    max-width: 800px;
+    margin: 0 auto 40px;
+    color: #687386;
+}
+
+.gris {
+    background: #f3f6fa;
+}
+
+.oscuro {
+    background: #07111f;
+    color: white;
+}
+
+.oscuro .card {
+    color: #172033;
+}
+
+/* TARJETAS */
+
+.grid {
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,.08);
+    transition: .25s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.icono {
+    font-size: 45px;
+    margin-bottom: 12px;
+}
+
+.numero {
+    font-size: 35px;
+    font-weight: 900;
+    color: #ff6b00;
+}
+
+.grande {
+    max-width: 800px;
+    margin: auto;
+}
+
+.titulo-bloque {
+    margin: 55px 0 25px;
+    font-size: 26px;
+}
+
+/* TABLA */
+
+.tabla-contenedor {
+    overflow-x: auto;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 950px;
+    margin: auto;
+    background: white;
+}
+
+th {
+    background: #07111f;
+    color: white;
+}
+
+th,
+td {
+    padding: 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* CRONOMETRO */
+
+.cronometro-seccion {
+    background: #ff6b00;
+    color: white;
+}
+
+.cronometro-seccion .introduccion {
+    color: white;
+}
+
+#reloj {
+    font-size: 75px;
+    font-weight: 900;
+    margin: 25px;
+}
+
+/* NUTRICION */
+
+.aviso {
+    max-width: 800px;
+    margin: 35px auto 0;
+    background: #fff4dd;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* CONTROL */
+
+.control-box {
+    max-width: 650px;
+    margin: auto;
+    padding: 35px;
+    background: #f3f6fa;
+    border-radius: 18px;
+}
+
+.control-item {
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.control-item label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.control-item input {
+    width: 100%;
+}
+
+.btn-evaluar {
+    width: 100%;
+    font-size: 17px;
+}
+
+#resultado {
+    margin-top: 25px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.estado-verde {
+    background: #dff7e7;
+}
+
+.estado-amarillo {
+    background: #fff3cd;
+}
+
+.estado-rojo {
+    background: #f8d7da;
+}
+
+.alerta-roja {
+    max-width: 850px;
+    margin: 40px auto 0;
+    background: #40171c;
+    padding: 25px;
+    border-radius: 12px;
+}
+
+/* PARTIDOS */
+
+.partido {
+    max-width: 700px;
+    margin: 30px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 30px;
+
+    background: #f3f6fa;
+    border-radius: 15px;
+}
+
+.partido span {
+    font-size: 50px;
+}
+
+.vs {
+    font-size: 30px;
+    color: #ff6b00;
+}
+
+/* FORMULARIO */
+
+.formulario {
+    max-width: 600px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.formulario input,
+.formulario select {
+    padding: 15px;
+    border: 1px solid #ccd3dd;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* CONTACTO */
+
+.contacto {
+    background: #101b2d;
+    color: white;
+}
+
+.contacto p {
+    margin-bottom: 25px;
+}
+
+.telefono {
+    display: inline-block;
+    font-size: 28px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 25px;
+}
+
+.whatsapp-grande {
+    display: inline-block;
+    background: #20b65a;
+    color: white;
+    padding: 18px 30px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+    background: #030914;
+    color: white;
+    padding: 45px 20px;
+    text-align: center;
+}
+
+footer p {
+    margin-top: 8px;
+}
+
+.copyright {
+    opacity: .6;
+    margin-top: 25px;
+}
+
+/* WHATSAPP */
+
+.whatsapp-flotante {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+
+    width: 62px;
+    height: 62px;
+
+    background: #20b65a;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-size: 29px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,.3);
+
+    z-index: 999;
+}
+
+/* CELULARES */
+
+@media (max-width: 850px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        margin-top: 12px;
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 6px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .seccion {
+        padding: 55px 5%;
+    }
+
+    .seccion > h2 {
+        font-size: 30px;
+    }
+
+    #reloj {
+        font-size: 55px;
+    }
+
+    .partido {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
